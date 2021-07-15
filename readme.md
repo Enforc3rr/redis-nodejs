@@ -22,8 +22,24 @@ a database, cache, message broker, and queue
 10) Array 
     - LPUSH KEY ITEM1 : To Add An item to left of an array named "KEY".
     - RPUSH KEY ITEM1 : To Add An item to left of an array named "KEY".
-    - R/LRANGE KEY StartingIndex EndingIndex : To Iterate And Get Values Of Array   
+    - LRANGE KEY StartingIndex EndingIndex : To Iterate And Get Values Of Array   
         - set EndingIndex To -1 To Iterate Till End Of Array
+    - LPOP KEY : Pops out item from left and returns us the value
+    - RPOP KEY : Pops out item from right and returns us the value
     
-
+11) Sets 
+    - SADD KEY "Item1" : To Add Item To Set 
+        - If It returns 1 that means Item has been added.
+        - If it returns 0 that means Item is already present and has not been added.
+    - SREM KEY "Item" : To Remove A particular Item From List
+        - If It returns 1 that means Item has been removed.
+        - If it returns 0 that means Item is already present and has not been removed.
+    - SMEMBERS KEY : To See The Members of a particular Set
+    
+12) Hashes : Something Similar To Objects In JS (Key-value pair)
+    - HSET ObjName Prop Value : To Set Property And Value Of an Object.  
+    - HGET ObjName Prop : To Get Value Of A Particular Property Of An Object.
+    - HGETALL ObjName :  To Get All Properties And Values Of an Object.
+    - HDEL ObjName Prop : To Delete Property Of A Particular Object.
+    - HEXISTS ObjName name : To Check If A particular Property Exists In AN Object or Not.
 
